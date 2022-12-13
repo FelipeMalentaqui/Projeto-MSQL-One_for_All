@@ -51,7 +51,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
   CREATE TABLE SpotifyClone.historico_de_reproducoes(
 	usuario_id INT,
     cancoes_id INT,
-    PRIMARY KEY (usuario_id, cancoes_id),
+    CONSTRAINT PRIMARY KEY (usuario_id, cancoes_id),
     data_reproducao DATETIME NOT NULL,
     FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id),
     FOREIGN KEY (cancoes_id) REFERENCES cancoes(cancoes_id)
